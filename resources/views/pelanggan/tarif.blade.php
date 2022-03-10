@@ -95,9 +95,7 @@
         </div>
     </div>
 </div>
-<form action="{{ route('updateTarif', $id = $item->id) }}" method="post">
-    @csrf
-    <input type="hidden" name="id" value="{{ $item->id }}">
+{{-- 
 <div id="editModal" class="modal modal-edu-general default-popup-PrimaryModal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -108,7 +106,9 @@
                 </div>
             </div>
             <div class="modal-body">
-                
+                <form action="{{ route('updateTarif', $id = $item->id) }}" method="post">
+                    @csrf
+                    <input type="hidden" name="id" value="{{ $item->id }}">
                     <div class="form-group-inner">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -132,10 +132,10 @@
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-custon-rounded-four btn-primary">Update</button>
                     </div>
-                
+                </form>
             </div>
         </div>
     </div>
-</div>
-</form>
+</div> --}}
+
 @endsection()
